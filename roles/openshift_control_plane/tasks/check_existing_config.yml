@@ -20,10 +20,10 @@
   - openshift_master_config_encoded_contents is defined
   - openshift_master_config_encoded_contents.content is defined
 
-- name: Check for file paths outside of /etc/origin/master in master's config
-  master_check_paths_in_config:
-    mastercfg: "{{ l_existing_config_master_config }}"
-  when: l_existing_config_master_config is defined
+#- name: Check for file paths outside of /etc/origin/master in master's config
+#  master_check_paths_in_config:
+#    mastercfg: "{{ l_existing_config_master_config }}"
+#  when: l_existing_config_master_config is defined
 
 - set_fact:
     # Take list of existing IDProviders so we can use/modify them later,
