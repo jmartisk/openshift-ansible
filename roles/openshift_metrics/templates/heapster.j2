@@ -34,7 +34,7 @@ spec:
         command:
         - "heapster-wrapper.sh"
         - "--wrapper.allowed_users_file=/secrets/heapster.allowed-users"
-        - "--source=kubernetes.summary_api:${MASTER_URL}?useServiceAccount=true&kubeletHttps=true&kubeletPort=10250"
+        - "--source=kubernetes.summary_api:${MASTER_URL}?useServiceAccount=true&kubeletHttps=true&kubeletPort=10250&insecure=true"
         - "--tls_cert=/heapster-certs/tls.crt"
         - "--tls_key=/heapster-certs/tls.key"
         - "--tls_client_ca=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt"
